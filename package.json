@@ -1,5 +1,5 @@
 {
-  "base":"https://skwoyasali.github.io/Book-Website/",
+  "base":"/Book-Website/",
   "name": "my-app",
   "private": true,
   "version": "0.0.0",
