@@ -13,11 +13,11 @@ import { createBrowserRouter , RouterProvider } from 'react-router-dom'
       element:<App />,
     } ,
     {
-      path:"/about",
+      path:"/Book-Website/about",
       element: <About />,
     },
     {
-      path:"/contact",
+      path:"/Book-Website/contact",
       element:<Contact />,
     }
   ])
