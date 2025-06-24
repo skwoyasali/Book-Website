@@ -4,9 +4,9 @@ function Header(){
     return (
         <>
         <nav className="flex justify-center items-center">
-            <Link className="m-2 p-2 font-medium hover:bg-blue-200"  to="/">Home</Link>
-            <Link className="m-2 p-2 font-medium hover:bg-blue-200" to="/about">About</Link>
-            <Link className="m-2 p-2 font-medium hover:bg-blue-200" to="/contact">Contact</Link>
+            <Link className="m-2 p-2 font-medium hover:bg-blue-200"  to="/Book-Website/">Home</Link>
+            <Link className="m-2 p-2 font-medium hover:bg-blue-200" to="/Book-Website/about">About</Link>
+            <Link className="m-2 p-2 font-medium hover:bg-blue-200" to="/Book-Website/contact">Contact</Link>
         </nav>
         </>
     )
