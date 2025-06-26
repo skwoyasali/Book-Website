@@ -2,6 +2,7 @@ import { useState } from "react";
 import Book from "./Book";
 import { books } from "../utils/mockdatta";
 import Search from "./Search";
+import { Link } from "react-router-dom";
 function BookList() {
   const [filteredbook, setFilteredBook] = useState(books);
 
@@ -10,7 +11,9 @@ function BookList() {
       <Search setFilteredBook={setFilteredBook} />
       <div className="flex flex-wrap justify-center">
         {filteredbook.map((data) => (
-          <Book key={data.id} bookDetails={data} />
+          <Link to={`/Book-Website/book/${data.id}`} key={data.id} >
+            <Book bookDetails={data} />
+          </Link>
         ))}
       </div>
     </div>

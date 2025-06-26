@@ -1,6 +1,6 @@
 function Book(props) {
   return (
-    <div className="w-60 h-auto m-3 mb-10 rounded-xl bg-emerald-50 p-3 hover:scale-105 transform transition duration-75 shadow">
+    <div className="w-60 h-130 m-3 mb-10 rounded-xl bg-emerald-50 p-3 hover:scale-105 transform transition duration-75 shadow">
       <img
         src={props.bookDetails.imageUrl}
         alt=""
