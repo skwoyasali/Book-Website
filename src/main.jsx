@@ -3,39 +3,52 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
 import "./App.css";
-import About from "./Components/About.jsx";
-import Contact from "./Components/Contact.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import BookList from "./Components/BookList.jsx";
-import BookDetails from "./Components/BookDetails.jsx"
+import BookDetails from "./Components/BookDetails.jsx";
+import Home from "./Components/Home.jsx";
+import NotFound from "./Components/NotFound.jsx";
+import AddBook from "./Components/AddBook.jsx";
+import { Provider } from "react-redux";
+import store from "./redux/store.js";
 
 const router = createBrowserRouter([
   {
-    path: "/Book-Website/",
+    path: "/",
     element: <App />,
     children: [
       {
-        path:"/Book-Website/",
-        element:<BookList />,
+        index:true,
+        element: <Home />,
       },
       {
-        path: "/Book-Website/about",
-        element: <About />,
+        path: "books/:category",
+        element: <BookList />,
       },
       {
-        path: "/Book-Website/contact",
-        element: <Contact />,
+        path: "browsebook",
+        element: <BookList />,
       },
       {
-        path:"/Book-Website/book/:id",
-        element:<BookDetails />
-      }
+        path: "book/:id",
+        element: <BookDetails />,
+      },
+    
+      {
+        path: "addbook",
+        element: <AddBook />,
+      },
     ],
+    
   },
+    {
+        path: "*",
+        element: <NotFound />,
+   },
 ]);
 
 createRoot(document.getElementById("root")).render(
-  <StrictMode>
+  <Provider store={store}>
     <RouterProvider router={router} />
-  </StrictMode>
+  </Provider>
 );
