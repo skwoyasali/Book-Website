@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import Book from "./Book";
+import Book from "../Components/Book";
 
 function Home() {
   const books = useSelector((state) => state.books);
@@ -14,10 +14,10 @@ function Home() {
       <h2 className="text-xl font-semibold">Categories:</h2>
       <ul className="list-disc ml-6 mb-6">
         {categories.map((cat) => (
-          <Link to={`/books/${cat}`}>
+          <Link to={`/books/${cat}`} key={cat}>
             {" "}
             <li
-              key={cat}
+              
               className="px-3 m-2 py-1 rounded-full bg-gray-800 text-white text-sm hover:bg-gray-700 cursor-pointer transition"
             >
               {cat}

@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
-import Book from "./Book";
-import Search from "./Search";
+import Book from "../Components/Book";
+import Search from "../Components/Search";
 
 function BookList() {
   const { category } = useParams();

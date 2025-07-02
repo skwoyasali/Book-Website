@@ -1,8 +1,9 @@
 import { useParams } from "react-router-dom";
-import { books } from "../utils/mockdatta";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 function BookDetails() {
+  const books =useSelector((state)=>state.books);
   const params = useParams();
   const book = books.filter((book) => book.id == params.id);
   return (

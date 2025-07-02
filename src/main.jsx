@@ -1,14 +1,13 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import "./index.css";
 import App from "./App.jsx";
 import "./App.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import BookList from "./Components/BookList.jsx";
-import BookDetails from "./Components/BookDetails.jsx";
-import Home from "./Components/Home.jsx";
-import NotFound from "./Components/NotFound.jsx";
-import AddBook from "./Components/AddBook.jsx";
+import BrowseBook from "./Pages/BrowseBook.jsx";
+import BookDetails from "./Pages/BookDetails.jsx";
+import Home from "./Pages/Home.jsx";
+import NotFound from "./Pages/NotFound.jsx";
+import AddBook from "./Pages/AddBook.jsx";
 import { Provider } from "react-redux";
 import store from "./redux/store.js";
 
@@ -23,11 +22,11 @@ const router = createBrowserRouter([
       },
       {
         path: "books/:category",
-        element: <BookList />,
+        element: <BrowseBook />,
       },
       {
         path: "browsebook",
-        element: <BookList />,
+        element: <BrowseBook />,
       },
       {
         path: "book/:id",
